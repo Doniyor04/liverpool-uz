@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anfield Stadioni | LIVERPOOL UZ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#464746",
+                    "on-secondary-fixed-variant": "#4d4800",
+                    "tertiary": "#c7c6c4",
+                    "on-primary-fixed-variant": "#92001c",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#d4ca43",
+                    "on-tertiary-container": "#1b1c1b",
+                    "background": "#fffbff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdad8",
+                    "on-primary-container": "#410007",
+                    "outline": "#857372",
+                    "tertiary-container": "#e3e3e1",
+                    "secondary-fixed": "#f1e65d",
+                    "on-surface": "#201a1a",
+                    "on-secondary-fixed": "#1f1c00",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "primary": "#c0001f",
+                    "inverse-primary": "#ffb3b1",
+                    "outline-variant": "#d8c2c1",
+                    "inverse-on-surface": "#fbeeec",
+                    "on-surface-variant": "#534342",
+                    "on-background": "#201a1a",
+                    "surface-variant": "#f5dddb",
+                    "inverse-surface": "#362f2e",
+                    "surface-dim": "#e4d7d6",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#f5e6e5",
+                    "surface": "#fffbff",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-tertiary-fixed": "#1b1c1b",
+                    "surface-bright": "#fff8f7",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#2e2b00",
+                    "primary-container": "#ffdad8",
+                    "surface-container-highest": "#f0e0df",
+                    "secondary": "#6a6100",
+                    "surface-tint": "#c0001f",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#f1e65d",
+                    "surface-container-low": "#fdf1f0",
+                    "surface-container": "#f8e9e8",
+                    "on-primary-fixed": "#410007",
+                    "on-error-container": "#410002"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "section-gap": "80px",
+                    "grid-gutter": "16px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Bebas Neue"],
+                    "headline-xl": ["Bebas Neue"],
+                    "body-md": ["Inter"],
+                    "label-stats": ["JetBrains Mono"],
+                    "display-lg": ["Bebas Neue"],
+                    "body-lg": ["Inter"],
+                    "headline-xl-mobile": ["Bebas Neue"],
+                    "button-text": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .hero-vignette {
+            background: linear-gradient(to bottom, transparent 0%, #fffbff 100%);
+        }
+        .stadium-path {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .stadium-path:hover {
+            fill: #c0001f !important;
+            filter: drop-shadow(0 0 8px rgba(192, 0, 31, 0.4));
+        }
+        .masonry {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-white/70 backdrop-blur-md border-b border-black/5">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Magazin</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-button-text text-button-text hover:bg-primary/90 transition-all duration-300 shadow-md">Kirish</button>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A breathtaking cinematic aerial photograph of Anfield Stadium in Liverpool at dusk. The stadium's modern architecture and iconic red details are illuminated by bright floodlights, creating a dramatic high-contrast scene against a deep twilight sky. The surrounding city lights of Liverpool glow softly in the background, reinforcing a prestigious and legendary sports atmosphere with deep red and charcoal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUNQe6KrquclWdPEt8XGzSHwfcM1m2kvQj_baRQNCMt2_lSVANTAypCVoV06r1zTi-PgpXIyrrCaS4ea6UzTWayB_s1Y3v-V0QRL2W3oqu2OKCSwLbLibrvSf7MZCgUJtDIuD1n9wmtqdRElNDu_kt1GzoTf5Cpg3zwcrSV4N03pXt-QWcduSU5zo9ebNXpx250X9Db20TnZnUmR_KTtnKp7FQ17ZNxwxLKKmuw6rchPg61EA6g3qRz9IvxmEudcQqt8MtQNtfQw1k"/>
+<div class="absolute inset-0 hero-vignette"></div>
+<div class="relative z-10 glass-panel p-12 md:p-24 rounded-2xl text-center max-w-4xl mx-4 shadow-xl">
+<h1 class="font-display-lg text-display-lg md:text-[120px] text-on-surface tracking-widest uppercase">ANFIELD STADIONI</h1>
+<p class="font-headline-md text-headline-md text-primary mt-4 tracking-[0.2em]">BU YER - ENFILD!</p>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="px-container-padding -mt-24 relative z-20 pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+<div class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-label-stats text-label-stats text-secondary mb-2">SIG'IMI</span>
+<h3 class="font-headline-xl text-headline-xl text-on-surface">54,000+</h3>
+<p class="text-on-surface-variant text-sm mt-2">Muxlislar uchun joylar soni</p>
+</div>
+<div class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-stats text-label-stats text-secondary mb-2">MANZIL</span>
+<h3 class="font-headline-xl text-headline-xl text-on-surface">LIVERPUL</h3>
+<p class="text-on-surface-variant text-sm mt-2">Angliya, Enfild yo'li</p>
+</div>
+<div class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-stats text-label-stats text-secondary mb-2">QURILGAN YILI</span>
+<h3 class="font-headline-xl text-headline-xl text-on-surface">1884</h3>
+<p class="text-on-surface-variant text-sm mt-2">Klubning muqaddas maskani</p>
+</div>
+</div>
+</section>
+<!-- Interactive Map -->
+<section class="px-container-padding py-section-gap bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6 uppercase tracking-tight">Interaktiv Xarita</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Anfield stadioni to'rtta asosiy tribunadan iborat: Main Stand, Sir Kenny Dalglish Stand, Anfield Road End va afsonaviy The Kop. Har bir sektor o'zining boy tarixi va o'ziga xos atmosferasiga ega.
+                    </p>
+<div class="space-y-4">
+<div class="glass-panel p-4 rounded-lg flex items-center gap-4 hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded bg-primary flex items-center justify-center font-bold text-white">1</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">THE KOP</h4>
+<p class="text-sm text-on-surface-variant">Eng ashaddiy muxlislar tribunasi</p>
+</div>
+</div>
+<div class="glass-panel p-4 rounded-lg flex items-center gap-4 hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant">2</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">MAIN STAND</h4>
+<p class="text-sm text-on-surface-variant">Eng katta va zamonaviy tribuna</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative glass-panel rounded-2xl p-8 bg-white/20 shadow-lg">
+<svg class="w-full h-auto" id="stadium-map" viewbox="0 0 800 600">
+<!-- Stadium Base -->
+<rect fill="none" height="200" rx="40" stroke="#857372" stroke-width="2" width="300" x="250" y="200"></rect>
+<!-- The Kop (Right) -->
+<path class="stadium-path" d="M560,210 L680,150 L680,450 L560,390 Z" data-info="Afsonaviy 12,000+ o'rinli tribuna" data-name="The Kop" fill="#d8c2c1"></path>
+<!-- Main Stand (Top) -->
+<path class="stadium-path" d="M260,190 L200,50 L600,50 L540,190 Z" data-info="20,000+ o'rinli asosiy bino" data-name="Main Stand" fill="#d8c2c1"></path>
+<!-- Sir Kenny Dalglish (Bottom) -->
+<path class="stadium-path" d="M260,410 L200,550 L600,550 L540,410 Z" data-info="Tarixiy markaziy tribuna" data-name="Sir Kenny Dalglish" fill="#d8c2c1"></path>
+<!-- Anfield Road (Left) -->
+<path class="stadium-path" d="M240,210 L120,150 L120,450 L240,390 Z" data-info="Muxlislar va mehmolar uchun joy" data-name="Anfield Road" fill="#d8c2c1"></path>
+<!-- Pitch -->
+<rect fill="#fdf1f0" height="160" rx="10" stroke="#c0001f" stroke-dasharray="4" stroke-width="1" width="260" x="270" y="220"></rect>
+</svg>
+<!-- Floating Tooltip (Dynamic) -->
+<div class="absolute hidden glass-panel p-4 rounded-lg pointer-events-none z-30 min-w-[200px] shadow-2xl" id="map-tooltip">
+<h5 class="font-headline-md text-headline-md text-primary" id="tooltip-title">Tribuna</h5>
+<p class="text-sm text-on-surface" id="tooltip-desc">Ma'lumotlar yuklanmoqda...</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="px-container-padding py-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-4">Galereya</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="masonry">
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-angle interior shot of Anfield Stadium during a night match, with the pitch glowing a vibrant emerald green under intense floodlights. The stands are filled with fans holding red scarves, creating a sea of red. The overall aesthetic is cinematic and high-energy, with deep shadows in the corners and a warm, glowing atmosphere highlighting the club's prestigious status." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyTFbs6dH4wW4E_LFokyv4xjUXTjUnh_g_ui2cwFNgxQyX9-rB6GZZHjMchcNWs3HisCeHI8NNXjBIUOnC1jWS0JSRu3gBH9Oo2fL1DWg3jFg1gtGa-osdK8ECmz0CJlP3iUenxo9gR19zm3pQ34kPF6m7iRUY4wMKlFrF-hYYhmRMmrmw64XFCV_hTttdx96o0FZi6QmFmlUUrzTGsXP2eU4xnse2hcrH4oeEfBgaRDz4ACHodqLryCbjuax7vY0rVwueDsUAUFk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Tun atmosferasi</p>
+</div>
+</div>
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A powerful low-angle shot of the Shankly Gates outside Anfield Stadium, showing the detailed ironwork and the 'You'll Never Walk Alone' inscription. The lighting is dramatic, with golden hour sunlight creating sharp highlights and deep shadows. The visual style is historic and authoritative, capturing a legendary piece of football history in a modern, cinematic way." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0r4Q6daDTSPKP6LSp_oX5rJfeNIIdXOPY_TpT97bs6B4H4AC7Y909aMopOwrxdM7Nr8ZTbXTllfF0LcQVyQEA2IlZZEzB8T5lOjVIqYaL3-m9IH1_Iwcxtc5VcTL_aT1oQ9BBVxeR4Mngf2mmwBdkfBCLRs3dGJE28FCB_zMWpmXa9RHHXX8oiH6uGB1WoNk3daS3se4BogmpshygMrCsZ4QhhJgIg5GXb2LrQTO3jRcSwWxLv3YaxBx5HgjSyuSO7YDymRi664T_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Shankly darvozalari</p>
+</div>
+</div>
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide cinematic shot of the 'This is Anfield' sign inside the player tunnel. The sign is illuminated by a sharp overhead spotlight, making the red and white text pop against the dark, moody tunnel background. The style is prestigious and intimidating, simulating the intense feeling players experience before stepping onto the legendary pitch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4g-FxgHZqpMw4aHKM-iyt9Ipl20U4J0nvblTeI8yh9rWCjMSJZTw6PGj9OEkdwRfHvhei0vnUbnL9tQQpOzJ1b4Q1dk44fkimZaw5en_HijzS3IaKJr4J8HhaGIhhVWPJREiW8mgimNCmQonqmrzBIVnuIQma1TsX2gwpq5Ddl6HyL1bo2v-DKd-nV14ZRkMOSQrUoDimPYI6Li3qJn4RMAoWSLS5l__mt8Iqd4s0Gbq-vAq54ZOQDSz6pNQ60Swt2luyY77y1CSA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Tunnel yo'lagi</p>
+</div>
+</div>
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide-angle landscape shot of Anfield stadium from the exterior, showing the modern architectural glass facade and brickwork during a clear afternoon. The building is clean and sharp, reflecting the blue sky. The scene is bright and professional, emphasizing the grandeur and scale of the modern sports complex." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTHefOFlnMs4ZeIm5TWvloHMiKNoN739FAUxBSBGkDwZ44cg5JOPQTyY9DRIXcf7kqaPZOC4CwhIk-WcG9Tvrph5YbVtdpO1EFtOregoLorxSkMNUazNJ7vbAt0h5RmsacrolWzpmoGFlcC-GtwbK54NhoIcAEnJ4rbiavD2OUzcqVwhsz2gFg0PTM61UhbVnlnpIxP3Lomgb2d7JIPBxuNOAFZUJ-9sTYRUqtnNzlDNOmiDbBIFDgqsHCqWMkDWUnyW8dCmCPkHM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Tashqi ko'rinish</p>
+</div>
+</div>
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An artistic shot of a red Liverpool jersey draped over a stadium seat at Anfield. The focus is sharp on the club crest, with the empty stands in the background softly blurred to create a shallow depth-of-field effect. The lighting is warm and emotional, highlighting the fan connection and the sacred nature of the venue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbbns31yd7dVwjPz98_MaSCbvcl5OX_p6QpWhD34af_qUQmj6mu1EfehDD8DS0rJqQZr5w6YxBIRhXmLkJLr9Y-Y6bX7vjrOQMU5Q6M2aWrrIKxyM1oEJuVMseLno8nhZITgOaZDauyQFZ-6j_OhGPQegiNSinTlrfM-o1U1pLrt92byEUhINekGMX_CpU7FavrwwAC7oKpOuH2XKSnLgVmVMuzEOVy0JYeJP3sNuzO9ZV6d6v43CEH5E-x2F-RMoWqNOrQPQSH_Rz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Muxlislar maskani</p>
+</div>
+</div>
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic night shot of Anfield's stadium roof and structural beams against a dark, moody sky. The architecture is lit with subtle red LEDs, creating a high-tech and modern industrial aesthetic. The perspective is from below, looking up to emphasize the power and dominance of the stadium's design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0WvH0BTY2frGF3FsTr2YXxMuzX8U3vGlpxJllSn2iSUXM1hii-eJniFWWL3AOMOtrF9fRpMH162CHSfTyI9xv06tJgGsXnXvFeo0rQgyBUDjJ0fRM0v7gaCm7SCZp1KBT222Hox0ASbE4Uew1Y44qjltSMq0wBEXvktvtnmmOsMkofFXREoa2lcWCottQ6Z80VSsCa0WvU2o58eOX0GJsd1T6-E6n8pqaqA33MJHMp9kS1bLU1X0iQBHsWV1wi3frcgsFJFTbjI-X"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<p class="font-headline-md text-headline-md text-white">Zamonaviy Main Stand</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding flex flex-col items-center gap-base bg-surface-container-low border-t border-black/5">
+<div class="font-headline-md text-headline-md text-primary mb-4">LIVERPOOL UZ</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Magazin</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bog'lanish</a>
+</div>
+<p class="font-body-md text-body-md opacity-80 text-on-surface-variant">© 2024 LIVERPOOL UZ. Barcha huquqlar himoyalangan.</p>
+</footer>
+<script>
+        // Interactive Map Logic
+        const stadiumPaths = document.querySelectorAll('.stadium-path');
+        const tooltip = document.getElementById('map-tooltip');
+        const tooltipTitle = document.getElementById('tooltip-title');
+        const tooltipDesc = document.getElementById('tooltip-desc');
+
+        stadiumPaths.forEach(path => {
+            path.addEventListener('mousemove', (e) => {
+                const name = path.getAttribute('data-name');
+                const info = path.getAttribute('data-info');
+                
+                tooltipTitle.innerText = name;
+                tooltipDesc.innerText = info;
+                
+                tooltip.style.left = (e.clientX + 15) + 'px';
+                tooltip.style.top = (e.clientY + 15) + 'px';
+                tooltip.classList.remove('hidden');
+                
+                // Active glow effect
+                path.style.filter = "drop-shadow(0 0 15px rgba(192, 0, 31, 0.4))";
+            });
+
+            path.addEventListener('mouseleave', () => {
+                tooltip.classList.add('hidden');
+                path.style.filter = "none";
+            });
+        });
+
+        // Simple Parallax for Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+    </script>
+</body></html>

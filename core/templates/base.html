@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{% block title %}LIVERPOOL UZ | Rasmiy Muxlislar Klubi{% endblock %}</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#464746",
+                        "on-secondary-fixed-variant": "#4d4800",
+                        "tertiary": "#646563",
+                        "on-primary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#d4ca43",
+                        "on-tertiary-container": "#1b1c1b",
+                        "background": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-container": "#410007",
+                        "outline": "#857372",
+                        "tertiary-container": "#e3e2e0",
+                        "secondary-fixed": "#f1e65d",
+                        "on-surface": "#201f1f",
+                        "on-secondary-fixed": "#1f1c00",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "primary": "#c8102e",
+                        "inverse-primary": "#ffb3b1",
+                        "outline-variant": "#d8c2c1",
+                        "inverse-on-surface": "#f5f0ef",
+                        "on-surface-variant": "#534343",
+                        "on-background": "#201f1f",
+                        "surface-variant": "#f4dddc",
+                        "inverse-surface": "#362f2f",
+                        "surface-dim": "#e1d9d9",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#f0e7e7",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed": "#e3e2e0",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "surface-bright": "#fff8f7",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#211b00",
+                        "primary-container": "#ffdad8",
+                        "surface-container-highest": "#ebe1e1",
+                        "secondary": "#6a5f00",
+                        "surface-tint": "#bf0229",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#f1e65d",
+                        "surface-container-low": "#f8f2f2",
+                        "surface-container": "#f3eded",
+                        "on-primary-fixed": "#410007",
+                        "on-error-container": "#410002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "24px",
+                        "section-gap": "80px",
+                        "grid-gutter": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bebas Neue"],
+                        "headline-xl": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "label-stats": ["JetBrains Mono"],
+                        "display-lg": ["Bebas Neue"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Bebas Neue"],
+                        "button-text": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+{% block content %}
+{% endblock %}
+
+
+</html>

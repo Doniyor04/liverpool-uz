@@ -1,0 +1,420 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bosh sahifa{% endblock %}
+
+{% block content %}
+
+<body class="font-body-md text-on-surface bg-background">
+    {% include 'liveScore.html' %}
+    {% include 'navbar.html' %}
+    <main class="pt-32 pb-section-gap px-container-padding max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <section class="mb-16">
+            <div
+                class="bg-surface p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                    <h1 class="font-display-lg text-display-lg text-primary uppercase tracking-tight">Bizning Jamoa</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Liverpool FC tarkibi va yulduzlari
+                        bilan tanishing.</p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-3">
+                    <button
+                        class="active-filter px-6 py-2 rounded-full font-button-text text-button-text border border-black/10 transition-all">Barchasi</button>
+                    <button
+                        class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Darvozabonlar</button>
+                    <button
+                        class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Himoyachilar</button>
+                    <button
+                        class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Yarim
+                        himoyachilar</button>
+                    <button
+                        class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Hujumchilar</button>
+                </div>
+            </div>
+        </section>
+        <!-- Players Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-grid-gutter">
+            <!-- Player Card 1 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Mohamed Salah"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8VDYOJmDPnZ_zcZLb-jnljL1xAEEtzanPknnSpGCK_PaYsYuYP-OwBp1hqIgtYCqCXXSFtavtNwGdpNf_26LEYUyVPY-nvTzUAz6zmTC9IiJNc-di7JgXhs4y6iOFQIpkZM0rLm_RJFGw4Ty9TGOnRNUUTqiG1ggLCISTGH-KJXzPQKS4moesfKqjN519uf_x1q2zfIXeuVeO8TyJnsPIj5z-gdsOwT1VXymHta7r2NhC5c189Od-0Bm1F2w3H47SWbYEuviDaHkr" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">11</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Mohamed Salah</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Misr, 31 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">24</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+                                <p class="font-label-stats text-primary">18</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 2 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Virgil van Dijk"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWraHF0O6jfUUSsBUYC3FsJWLuscZVZ2kHUb1nKTnadygjjldwXW1pDO74AVeQJcDY92X16UgFN6Q1-HWWnpN7XOsP-ydJXz2xmENI9RLq9Oe6dPk27K2XcDoD1TxJOkR_5OQVmd2TGdDzKR-rSJtZ6DSHQ5_tnYgenJONlv20Dwwwb7uGFV_KROH9p9zoTMy9wnqL66BpgRogwHJH0ypC9eDnLt9DkgMS18aKtkIioXRFwkMNoEdZOTNsXzRPLQTuTs12SaKHPQi" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Himoyachi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">4</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Virgil van Dijk</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Niderlandiya, 32 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">22</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">To'siq</p>
+                                <p class="font-label-stats text-primary">45</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 3 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Alisson Becker"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9qskqyd7jTCJ_N5fvOOhg8PKVENsugoft43yiVQXjIUDmGWpBAgOvJiKpsEcFGjctdoCNf_gTyJPot2AR4wJbOFlC36sMGCB2hFj0p-5PS-ZFaAfYBXHG8MhfKn9G5NmV0mR8YgtePabDZ3V3Wf0P_buozaLOeVQAJ8ebzFo7zwLtnglP8lvMQkIkhS5-PQzxXqU4eS1Na5Bk6SsthZwuasBvY8r1zv2Aq8s2zVkC8IsiyDjBou204vYNVDuB7KQGLbNRpWGSOrpP" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Darvozabon</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">1</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Alisson Becker</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Braziliya, 31 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">21</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Quruq</p>
+                                <p class="font-label-stats text-primary">9</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 4 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="T. Alexander-Arnold"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhuP8qfAHrvE-6fCQl3Zgz-H7N40dy4-yd9S7jWOSAHtC0plidjvypR9uBJQl-ZwVtVkveOplKpWVUpwZsF0q1Go2aPTvxN2G8H2Z7hskzSZ5rH6ZRno1qbizKyG-iVtu5eDc5-uAOekGwKcfBSaDJmTcPgKH8Jhj9bt40EwIjYE5MFPaUbumg9P3f1moYZeP7eU0wAq0aes7VJe5daHwA8JG02FyGEWxFMx_sgiffBazwQPUodxX35SvjjmpDdrdB5tdrhsoHEFR" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Himoyachi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">66</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">T. Alexander-Arnold
+                            </h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Angliya, 25 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">20</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Assist</p>
+                                <p class="font-label-stats text-primary">10</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 5 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Dominik Szoboszlai"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZSi1l5LwYC-99AmDQ7RQKllG_0KMZa_jesR_6gbUcQ-8_Q91xEYJMehQwmAwwUgmmpuuGBWP5uu3W3wyZ_6jyt7ayK9fJZRX9ytc3W4LcREbh8flT96R1tiCWfKJBu-VClkZW9MCyFBT1oKNUQm6jwZ6FvJtnTXoqh3utshhnG1fLf1n30xsOF_NMNFKtDrZ07e6zTdUeViGhKAe5uArZ4WWRNt3cQs6XpAvfTXCUHr0UhYqpovu46kyQbLCkPucUA_yIN_nCA5Tz" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Yarim
+                            himoyachi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">8</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Dominik Szoboszlai
+                            </h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Vengriya, 23 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">23</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+                                <p class="font-label-stats text-primary">3</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 6 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Luis Díaz"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUl5fHKbHhf0H3RCUajpeB5HPgJ9M1lOukJKqOkKILC_n-klQqLwAkzhTvyEziU44oN796pIaAvEzGijml29Rus5pDvvVkTWG7Fkd0bDTzai95srMCELi0G6V-bvXyaOOwhtMHBcpvwpv1PzHCeZ9n7PdHe2V9SA60TDPwRrO1oOsXSG47pPWImHBoGQY4EGg65tdqyUjL_ce0nefRxVC3Z3SSx7F1-qVSjEUS5G9FJyO-jooyqnAd-7Rl027JlVCaW55ViqQvlTf2" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">7</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Luis Díaz</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Kolumbiya, 27 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">21</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+                                <p class="font-label-stats text-primary">6</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 7 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Alexis Mac Allister"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSwg3A9pyWFvIlxZbX-I0ed9We9mStiEB9UWQ0RLAa1CGHSQzSp52So9YNrBiv51B2R9bjCvUA6_JnlqzL1l3aNe1Hgn5hk4fL8Y5uu3cmi1SApPuLKyyd6Tv0Ama8_2Eey8LArFWcYKDfnGqk-OG27AFiH5FlpsMsBAMOiKjxdzDQ0FuwMoBEiVdUAUd5c-JvfRR3Eq_4b-yI8DjOG-iEYnQuq96ExR6CntELZTj8eABUJlT1Jtz48uVPKXtwdAZ_oNuk2DAKey9c" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Yarim
+                            himoyachi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">10</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Alexis Mac Allister
+                            </h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Argentina, 25 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">18</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Uzatma</p>
+                                <p class="font-label-stats text-primary">92%</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Player Card 8 -->
+            <div
+                class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Darwin Núñez"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUmo4E9MSKkvP6eI-ZoMxh7V0qP6wxfscYwOLKqQFJlLhI7Uhuh1nyac-umvJcs1_AEPif9N8O4x7cYB-YUHPqn9sbQWXr7kP6fbtX9_l2mUF78W8FcGi2o6NiVsDBncvT4zQEourQi80EpYD2pXrJhw-Hcbk3kgv9e9wmHAImtjC2MngEhAJmdl-7u95BG1x8Q2mH-mrwxCr0sL5BK2mmQYukh46rSRVikd0BLp6tbfRhdwTzrwCwanSQCFvwyqmEdoCodzNtegM9" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="font-display-lg text-4xl text-primary/30">9</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface uppercase">Darwin Núñez</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-body-md">Urugvay, 24 yosh</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+                                <p class="font-label-stats text-primary">23</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+                                <p class="font-label-stats text-primary">10</p>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Technical Staff Section -->
+        <section class="mt-24">
+            <h2 class="font-headline-xl text-headline-xl text-on-surface mb-8 border-l-4 border-primary pl-4">Texnik
+                shtab</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+                <div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+                    <div class="w-20 h-20 rounded-full border-2 border-primary overflow-hidden bg-surface-container">
+                        <img class="w-full h-full object-cover" data-alt="Arne Slot"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq_I-zPuwaRYOk5Z31pNHaNPuCfSWR9VdQ3kY_Y8V5DQ1JrZw8SyJhDfV7JtHIIx7xqKfJPDoj6UQGDSwXTFjYfSIcJ98TpNIv4McM37sTe65V5FNF5UsfruhS5Jq7G0Z57xiG3HRTWCgB7z5p6_UtwjcHcfZZIzK2pyHjwPQVVRsFXnhMTeJSvDDX2B1o3nGAqm-mKq5O7Qea3Wh8Eu3G7TKZmwt18L6TkZee1tg__99L1lrJGuo4SLJRrkQII9QVLOp5DAeXfAo" />
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface">Arne Slot</h4>
+                        <p class="text-on-surface-variant font-body-md">Bosh murabbiy</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+                    <div class="w-20 h-20 rounded-full border-2 border-black/10 overflow-hidden bg-surface-container">
+                        <img class="w-full h-full object-cover" data-alt="John Heitinga"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMR2z-9qPpXegAEGyJLiGFl0kIAF6YPvolXxqnvYYpPIFUZsrM6vetP7p3vi6Y3g0fOgzkjAVSOQW1N6Jq303dgeaPltucfW8HKvz9y2sKiLqS8EyAnR5JrH0liWsS_8nn4SY5EcU6IpkDNpit7yk7lgW13sju8ouGNxYP-iyCuoi_gcCgcq-jY1Qm-txYDbHer9MUxG84ryvSMWXFL8fbTry_CQEBiBlvaQiCzqmp6TQsjubmVfHMtSTaK_SKk_8_YSKxDNZ-gREd" />
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface">John Heitinga</h4>
+                        <p class="text-on-surface-variant font-body-md">Murabbiy yordamchisi</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+                    <div class="w-20 h-20 rounded-full border-2 border-black/10 overflow-hidden bg-surface-container">
+                        <img class="w-full h-full object-cover" data-alt="Richard Hughes"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlOlOskUeKdyHs-SXRX2GzJUqosLZHeNqQwXo1upOlE5htIymkWNIVgMSwz-VcxuX7SzcXjtmDXOkvq_4iFxOBl-uUHZTJPXUFUJKJMuBkWPVmhTrGG_3I6KINsSDHeqX0GBmH4SWS5ePwEpg622xPC3qvrOri6u_60h8B27vYPDRWUs2k-vLRnH8oCzUGn4lKANX9xv67T7_9bLIfElQTQj_lL794cJnfqDLnO69YXnPabrqzzIdbCAojBqcVXs9PEXO5rUbv9r4" />
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface">Richard Hughes</h4>
+                        <p class="text-on-surface-variant font-body-md">Sport direktori</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <style>
+        /* The team */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-panel {
+            background: rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .player-card-hover:hover {
+            box-shadow: 0 10px 30px rgba(200, 16, 46, 0.15);
+            border-color: rgba(200, 16, 46, 0.3);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(200, 16, 46, 0.1);
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #1c1b1b;
+            overflow-x: hidden;
+        }
+
+        .active-filter {
+            background-color: #c8102e !important;
+            color: white !important;
+            border-color: #c8102e !important;
+        }
+    </style>
+
+</body>
+{% endblock %}

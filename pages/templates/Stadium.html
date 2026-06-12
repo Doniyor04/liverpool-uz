@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Enfild{% endblock %}
+
+
+{% block content %}
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden stadium_page">
+    {% include 'navbar.html' %}
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover"
+                data-alt="A breathtaking cinematic aerial photograph of Anfield Stadium in Liverpool at dusk. The stadium's modern architecture and iconic red details are illuminated by bright floodlights, creating a dramatic high-contrast scene against a deep twilight sky. The surrounding city lights of Liverpool glow softly in the background, reinforcing a prestigious and legendary sports atmosphere with deep red and charcoal tones."
+                src="https://images.unsplash.com/photo-1727873275022-d5189075c660?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5maWVsZHxlbnwwfHwwfHx8MA%3D%3D" />
+            <div class="absolute inset-0 hero-vignette"></div>
+            <div class="relative z-10 glass-panel p-12 md:p-24 rounded-2xl text-center max-w-4xl mx-4 shadow-xl">
+                <h1 class="font-display-lg text-display-lg md:text-[120px] text-on-surface tracking-widest uppercase">
+                    {{ stadium }} STADIONI</h1>
+                <p class="font-headline-md text-headline-md text-primary mt-4 tracking-[0.2em]">BU YER - ENFILD!</p>
+            </div>
+        </section>
+        <!-- Stats Section -->
+        <section class="px-container-padding -mt-24 relative z-20 pb-section-gap">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div
+                    class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                        style="font-variation-settings: 'FILL' 1;">groups</span>
+                    <span class="font-label-stats text-label-stats text-secondary mb-2">SIG'IMI</span>
+                    <h3 class="font-headline-xl text-headline-xl text-on-surface">{{ stadium.capacity }}+</h3>
+                    <p class="text-on-surface-variant text-sm mt-2">Muxlislar uchun joylar soni</p>
+                </div>
+                <div
+                    class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                        style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    <span class="font-label-stats text-label-stats text-secondary mb-2">MANZIL</span>
+                    <h3 class="font-headline-xl text-headline-xl text-on-surface">{{ stadium.address }}</h3>
+                    <p class="text-on-surface-variant text-sm mt-2">Angliya, Enfild yo'li</p>
+                </div>
+                <div
+                    class="glass-panel p-8 rounded-xl flex flex-col items-center text-center transition-transform hover:scale-105 border border-white/50">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                        style="font-variation-settings: 'FILL' 1;">history</span>
+                    <span class="font-label-stats text-label-stats text-secondary mb-2">QURILGAN YILI</span>
+                    <h3 class="font-headline-xl text-headline-xl text-on-surface">{{ stadium.established_year }}</h3>
+                    <p class="text-on-surface-variant text-sm mt-2">Klubning muqaddas maskani</p>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Map -->
+        <section class="px-container-padding py-section-gap bg-surface-container-low">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-headline-xl text-headline-xl text-on-surface mb-6 uppercase tracking-tight">
+                        Interaktiv Xarita</h2>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Anfield stadioni to'rtta asosiy tribunadan iborat: Main Stand, Sir Kenny Dalglish Stand, Anfield
+                        Road End va afsonaviy The Kop. Har bir sektor o'zining boy tarixi va o'ziga xos atmosferasiga
+                        ega.
+                    </p>
+                    <div class="space-y-4">
+                        <div
+                            class="glass-panel p-4 rounded-lg flex items-center gap-4 hover:bg-primary/5 transition-colors group">
+                            <div
+                                class="w-12 h-12 rounded bg-primary flex items-center justify-center font-bold text-white">
+                                1</div>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface">THE KOP</h4>
+                                <p class="text-sm text-on-surface-variant">Eng ashaddiy muxlislar tribunasi</p>
+                            </div>
+                        </div>
+                        <div
+                            class="glass-panel p-4 rounded-lg flex items-center gap-4 hover:bg-primary/5 transition-colors group">
+                            <div
+                                class="w-12 h-12 rounded bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant">
+                                2</div>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface">MAIN STAND</h4>
+                                <p class="text-sm text-on-surface-variant">Eng katta va zamonaviy tribuna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative glass-panel rounded-2xl p-8 bg-white/20 shadow-lg">
+                    <svg class="w-full h-auto" id="stadium-map" viewbox="0 0 800 600">
+                        <!-- Stadium Base -->
+                        <rect fill="none" height="200" rx="40" stroke="#857372" stroke-width="2" width="300" x="250"
+                            y="200"></rect>
+                        <!-- The Kop (Right) -->
+                        <path class="stadium-path" d="M560,210 L680,150 L680,450 L560,390 Z"
+                            data-info="Afsonaviy 12,000+ o'rinli tribuna" data-name="The Kop" fill="#d8c2c1"></path>
+                        <!-- Main Stand (Top) -->
+                        <path class="stadium-path" d="M260,190 L200,50 L600,50 L540,190 Z"
+                            data-info="20,000+ o'rinli asosiy bino" data-name="Main Stand" fill="#d8c2c1"></path>
+                        <!-- Sir Kenny Dalglish (Bottom) -->
+                        <path class="stadium-path" d="M260,410 L200,550 L600,550 L540,410 Z"
+                            data-info="Tarixiy markaziy tribuna" data-name="Sir Kenny Dalglish" fill="#d8c2c1"></path>
+                        <!-- Anfield Road (Left) -->
+                        <path class="stadium-path" d="M240,210 L120,150 L120,450 L240,390 Z"
+                            data-info="Muxlislar va mehmolar uchun joy" data-name="Anfield Road" fill="#d8c2c1"></path>
+                        <!-- Pitch -->
+                        <rect fill="#fdf1f0" height="160" rx="10" stroke="#c0001f" stroke-dasharray="4" stroke-width="1"
+                            width="260" x="270" y="220"></rect>
+                    </svg>
+                    <!-- Floating Tooltip (Dynamic) -->
+                    <div class="absolute hidden glass-panel p-4 rounded-lg pointer-events-none z-30 min-w-[200px] shadow-2xl"
+                        id="map-tooltip">
+                        <h5 class="font-headline-md text-headline-md text-primary" id="tooltip-title">Tribuna</h5>
+                        <p class="text-sm text-on-surface" id="tooltip-desc">Ma'lumotlar yuklanmoqda...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section class="px-container-padding py-section-gap">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-4">Galereya</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="masonry">
+                {% for img in gallery %}
+                    <div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl shadow-lg">
+                    <img class="w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A high-angle interior shot of Anfield Stadium during a night match, with the pitch glowing a vibrant emerald green under intense floodlights. The stands are filled with fans holding red scarves, creating a sea of red. The overall aesthetic is cinematic and high-energy, with deep shadows in the corners and a warm, glowing atmosphere highlighting the club's prestigious status."
+                        src="{{ img.image.url }}" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        <p class="font-headline-md text-headline-md text-white">{{ img.title }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+
+    {% include 'footer.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+<style>
+    .navbar {
+        top: 0;
+    }
+
+    /* Stadium */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-vignette {
+        background: linear-gradient(to bottom, transparent 0%, #fbf9f8 100%);
+    }
+
+    .stadium-path {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .stadium-path:hover {
+        fill: #c0001f !important;
+        filter: drop-shadow(0 0 8px rgba(192, 0, 31, 0.4));
+    }
+
+    .masonry {
+        column-count: 1;
+        column-gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .masonry {
+            column-count: 2;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .masonry {
+            column-count: 3;
+        }
+    }
+</style>
+{% endblock %}

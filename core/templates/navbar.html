@@ -1,0 +1,13 @@
+<!-- Top Navigation Bar -->
+<header class="fixed top-10 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-surface/80 backdrop-blur-md border-b border-black/5 navbar">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-button-text text-button-text" href="{% url 'home_page' %}">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="{% url 'stadium_page' %}">Stadion</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="{% url 'club_history' %}">Tarix</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="{% url 'contact_page' %}">Aloqa</a>
+</nav>
+<button class="px-6 py-2 bg-primary text-on-primary font-button-text text-button-text rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Kirish</button>
+</header>

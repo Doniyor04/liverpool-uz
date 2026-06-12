@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIVERPOOL UZ | Rasmiy Muxlislar Klubi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+        }
+        .text-gradient-animate {
+            background: linear-gradient(to right, #c8102e, #bf0229, #d4ca43, #c8102e);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 5s linear infinite;
+        }
+        @keyframes gradient-flow {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        .glow-red {
+            box-shadow: 0 0 15px rgba(200, 16, 46, 0.3);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#464746",
+                        "on-secondary-fixed-variant": "#4d4800",
+                        "tertiary": "#646563",
+                        "on-primary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#d4ca43",
+                        "on-tertiary-container": "#1b1c1b",
+                        "background": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-container": "#410007",
+                        "outline": "#857372",
+                        "tertiary-container": "#e3e2e0",
+                        "secondary-fixed": "#f1e65d",
+                        "on-surface": "#201f1f",
+                        "on-secondary-fixed": "#1f1c00",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "primary": "#c8102e",
+                        "inverse-primary": "#ffb3b1",
+                        "outline-variant": "#d8c2c1",
+                        "inverse-on-surface": "#f5f0ef",
+                        "on-surface-variant": "#534343",
+                        "on-background": "#201f1f",
+                        "surface-variant": "#f4dddc",
+                        "inverse-surface": "#362f2f",
+                        "surface-dim": "#e1d9d9",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#f0e7e7",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed": "#e3e2e0",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "surface-bright": "#fff8f7",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#211b00",
+                        "primary-container": "#ffdad8",
+                        "surface-container-highest": "#ebe1e1",
+                        "secondary": "#6a5f00",
+                        "surface-tint": "#bf0229",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#f1e65d",
+                        "surface-container-low": "#f8f2f2",
+                        "surface-container": "#f3eded",
+                        "on-primary-fixed": "#410007",
+                        "on-error-container": "#410002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "24px",
+                        "section-gap": "80px",
+                        "grid-gutter": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bebas Neue"],
+                        "headline-xl": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "label-stats": ["JetBrains Mono"],
+                        "display-lg": ["Bebas Neue"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Bebas Neue"],
+                        "button-text": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Live Score Ticker -->
+<div class="fixed top-0 w-full z-[60] bg-surface-container-lowest/80 backdrop-blur-md border-b border-black/5 h-10 flex items-center overflow-hidden">
+<div class="flex whitespace-nowrap animate-[marquee_30s_linear_infinite] gap-12 items-center px-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse glow-red"></span>
+<span class="font-label-stats text-label-stats tracking-widest text-on-surface">LIVE: Liverpool 2-1 Man City (78')</span>
+</div>
+<div class="flex items-center gap-3 opacity-60">
+<span class="font-label-stats text-label-stats text-on-surface">Real Madrid 0-0 Barcelona (12')</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse glow-red"></span>
+<span class="font-label-stats text-label-stats tracking-widest text-on-surface">LIVE: Liverpool 2-1 Man City (78')</span>
+</div>
+<div class="flex items-center gap-3 opacity-60">
+<span class="font-label-stats text-label-stats text-on-surface">Real Madrid 0-0 Barcelona (12')</span>
+</div>
+</div>
+</div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-10 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-surface/80 backdrop-blur-md border-b border-black/5">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-button-text text-button-text" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-button-text text-button-text" href="#">Magazin</a>
+</nav>
+<button class="px-6 py-2 bg-primary text-on-primary font-button-text text-button-text rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Kirish</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-10">
+<!-- Stadium Background -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A dramatic cinematic wide shot of Anfield Stadium in Liverpool at night under floodlights. Thick fog and atmospheric smoke drift across the pitch, creating high-contrast shadows and glowing highlights in a prestigious sports photography style. The color palette is dominated by deep charcoal blacks and vibrant primary reds, emphasizing an authoritative and legendary football atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Y0O8wsNgzoTvpogXfFjbFxannlF1qOr5ud9dv6eF0QA7VtLCMbNIpjzd0UdP_idI3sQM-FM23nRzCP3Sp8_GrnqBr_ENLxUxV6xKej_DRsjUji0i8Y692CTIVv1FcwyNxGOSw3IILPr14GcEoun2WiLjosXv_7Gd0BGuqbZO-zFHihTxfhwEu-rCdaEFf9gWLTqpshOEC5MQmqTQ80mUqfiUY1uIEMMvJVpU81Y2_Ydg4LiSAyfSQErvfTORV4b-Npoi75iJfd40"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+<!-- Overlay to brighten/wash out for Light Mode if needed, but keeping image as is as per instructions to only style the UI -->
+<div class="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 container mx-auto px-container-padding flex flex-col items-center text-center mt-[-4rem]">
+<h1 class="font-display-lg text-display-lg md:text-[120px] text-on-surface tracking-tighter leading-none mb-4 drop-shadow-sm">
+                LIVERPOOL UZ
+            </h1>
+<p class="font-headline-md text-headline-md text-primary max-w-2xl mb-8 opacity-90 drop-shadow-sm">
+                O'zbekistondagi eng ashaddiy "Skayuzer"lar hamjamiyati
+            </p>
+<!-- Floating Interactive Card -->
+<div class="group relative max-w-md w-full">
+<!-- Next Match Card (Default) -->
+<div class="glass-panel p-8 rounded-[2rem] transition-all duration-500 transform group-hover:scale-[1.02] cursor-pointer" id="matchCard">
+<div class="flex justify-between items-center mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Navbatdagi O'yin</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-stats text-label-stats flex items-center gap-2" onclick="toggleTable(event)">
+                            Premier League <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="flex justify-between items-center gap-4">
+<div class="flex flex-col items-center flex-1">
+<div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-2 shadow-inner">
+<img alt="LFC" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC21XPmWc0kFnBAMZ4t0nqsGjAqz7q1RMndv25BSAimDyI9B7FVZv0xL0s7ZdnN2ZA5uE-M_TeutxFSXtnraMfL3wGDRBLwss4EbxOXS8ZN9j-fE4wgBlIxtO5xGiAzdRHWeabcLA5f02ltqVKlFHQLSaw2H4wXSgOm0uPwbCKqCYC2IRxDRsGYdCl9lwjAYVdH5Lr8pVedohUXX0xAGUaUZFbgppREmXCBUQ9wtQW6z7Ti0uN98vxshQLZK5IN8cSRlbPvvmVXRlFL"/>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">LFC</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-stats text-[24px] text-primary">VS</span>
+<span class="text-xs text-on-surface-variant mt-1 font-label-stats">28 MAY | 21:00</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-2 shadow-inner">
+<img alt="ARS" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC82_W-iY_eN5K_wK7Lz06Xw_o5q5e6P-zZ-o9-mE-v-T_i3-Q1v-m-p-l-r-s-t-u-v-w-x-y-z"/>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">ARS</span>
+</div>
+</div>
+<button class="w-full mt-8 py-3 bg-primary text-on-primary font-button-text text-button-text rounded-xl hover:shadow-[0_8px_20px_rgba(200,16,46,0.3)] transition-all uppercase">
+                        BATAFSIL
+                    </button>
+</div>
+<!-- Compact Table Card (Hidden) -->
+<div class="absolute inset-0 glass-panel p-6 rounded-[2rem] opacity-0 pointer-events-none transition-all duration-500 translate-y-4 flex flex-col justify-between" id="tableCard">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-label-stats text-xs text-primary uppercase tracking-widest">TOP 5 JADVAL</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="toggleTable(event)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<table class="w-full text-left text-xs">
+<tbody class="divide-y divide-black/5">
+<tr class="bg-primary/5">
+<td class="py-2 px-1 font-label-stats text-on-surface">1</td>
+<td class="py-2 flex items-center gap-2">
+<img alt="LFC" class="w-4 h-4 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC21XPmWc0kFnBAMZ4t0nqsGjAqz7q1RMndv25BSAimDyI9B7FVZv0xL0s7ZdnN2ZA5uE-M_TeutxFSXtnraMfL3wGDRBLwss4EbxOXS8ZN9j-fE4wgBlIxtO5xGiAzdRHWeabcLA5f02ltqVKlFHQLSaw2H4wXSgOm0uPwbCKqCYC2IRxDRsGYdCl9lwjAYVdH5Lr8pVedohUXX0xAGUaUZFbgppREmXCBUQ9wtQW6z7Ti0uN98vxshQLZK5IN8cSRlbPvvmVXRlFL"/>
+<span class="font-bold text-on-surface">Liverpool</span>
+</td>
+<td class="py-2 text-right font-label-stats text-primary">92</td>
+</tr>
+<tr>
+<td class="py-2 px-1 font-label-stats opacity-60 text-on-surface">2</td>
+<td class="py-2 flex items-center gap-2 opacity-60 text-on-surface">Man City</td>
+<td class="py-2 text-right font-label-stats opacity-60 text-on-surface">91</td>
+</tr>
+<tr>
+<td class="py-2 px-1 font-label-stats opacity-60 text-on-surface">3</td>
+<td class="py-2 flex items-center gap-2 opacity-60 text-on-surface">Arsenal</td>
+<td class="py-2 text-right font-label-stats opacity-60 text-on-surface">89</td>
+</tr>
+<tr>
+<td class="py-2 px-1 font-label-stats opacity-60 text-on-surface">4</td>
+<td class="py-2 flex items-center gap-2 opacity-60 text-on-surface">Aston Villa</td>
+<td class="py-2 text-right font-label-stats opacity-60 text-on-surface">68</td>
+</tr>
+<tr>
+<td class="py-2 px-1 font-label-stats opacity-60 text-on-surface">5</td>
+<td class="py-2 flex items-center gap-2 opacity-60 text-on-surface">Tottenham</td>
+<td class="py-2 text-right font-label-stats opacity-60 text-on-surface">66</td>
+</tr>
+</tbody>
+</table>
+<button class="w-full mt-4 py-2 border border-black/10 hover:bg-black/5 text-[10px] text-on-surface-variant font-button-text rounded-lg transition-all uppercase tracking-widest">
+                        To'liq jadvalni ko'rish
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section class="py-section-gap relative overflow-hidden bg-surface">
+<div class="container mx-auto px-container-padding">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-2 text-on-surface">SO'NGGI YANGILIKLAR</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<button class="text-primary flex items-center gap-2 hover:gap-4 transition-all">
+                    Barchasini ko'rish <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-grid-gutter overflow-x-auto hide-scrollbar pb-8 snap-x">
+<!-- News Card 1 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="glass-panel overflow-hidden rounded-xl h-[450px] flex flex-col transition-transform duration-500 group-hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional sports photograph of a high-intensity football moment. A Liverpool player in a vibrant red kit is captured in mid-action under stadium lights with motion blur in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW0FdsINmipSjauNxzey0WAJX8x7b5tke15tPUNE7WpbX-Yj83yWsJIDVQ4InnX5wGE3KbGflFhcPhxKSh-Lg9I7k_I0YOCtczdQQ7ZmOStjNdLN50w89Ngoioj0dv0xzYNRqvAeky35_2MomSUGnDU5sErpGDSZ7Zcgis6Zn1JBJgqZlqCWKktiK8iHK0jRuaeRY1vSQB1xGACaV-Q0BClo5iXEnVWVlDEJjcXlNWzAtAw3pC5h8KFzEK8UEKBWBLY-HvZ7dhPysH"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-bold">RASMIY</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<h3 class="font-headline-md text-headline-md line-clamp-2 text-on-surface">JURGEN KLOPP: "BIZ YANADA KUCHLIROQ QAYTAMIZ"</h3>
+<div class="flex justify-between items-center mt-4">
+<span class="text-xs text-on-surface-variant font-label-stats uppercase">2 SOAT OLDIN</span>
+<span class="material-symbols-outlined text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="glass-panel overflow-hidden rounded-xl h-[450px] flex flex-col transition-transform duration-500 group-hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic medium shot of football players celebrating a goal at Anfield." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT--iGSeN8V2Ijt6nMhPOgb4qcfQ3LnX4GjX9muadAmSxgSVDS1u4iBolCm27olNKecOo9Pg1oUXpMEclrvw5kdXs-nb9RvvzNId2-n19LJOjQOsMBLPLTMIu4gO7fLh6cAv_P2Sq9D7dfMGvSpg3FUTTCIgd44Vk3VHmDJql4w4U-SOoHEoQ5Vzk5XljXpvJd1EWlK2zBAuYeX9Gl_B9UUkIozXdD2ixbk3f6_rqm7emciKBMMxQTE8gyGWs2j5sn9HWqLU8PYvzg"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-bold">INTERVYU</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<h3 class="font-headline-md text-headline-md line-clamp-2 text-on-surface">MOHAMED SALAH YANGI SHARTNOMA BORASIDA</h3>
+<div class="flex justify-between items-center mt-4">
+<span class="text-xs text-on-surface-variant font-label-stats uppercase">5 SOAT OLDIN</span>
+<span class="material-symbols-outlined text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="glass-panel overflow-hidden rounded-xl h-[450px] flex flex-col transition-transform duration-500 group-hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stylized overhead view of a modern football training facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZgXrB-vcr0bNOp2-6BfvxOX-AjVTbuvJigVPd9Xp1KqD4dPTTCyrUHsjBzGN16JXHrNAOk1YZnbwSmf0fHODxA4oqXm4rXRKhc2Qw8UPV-mdhzow1ce8S0Fotm4TTkYSibLKH6knoihW_cYmeRULvOa96cqT7j5RRP2BK4eYdalQEGprVyM5-dG-NCLVnh3qY9emTYk2l-blzvRqR67mi4i_Y_qK7Sj4lLtbxrSW7IVropzNfr64bDsLDcYv6z65iVEQ8jpkLCDT"/>
+<div class="absolute top-4 left-4 bg-black/10 backdrop-blur px-3 py-1 rounded text-xs font-bold text-on-surface">AKADEMIYA</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<h3 class="font-headline-md text-headline-md line-clamp-2 text-on-surface">YOSH ISTE'DODLAR: KEYINGI AVLOD ANFIELDA</h3>
+<div class="flex justify-between items-center mt-4">
+<span class="text-xs text-on-surface-variant font-label-stats uppercase">1 KUN OLDIN</span>
+<span class="material-symbols-outlined text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</div>
+<!-- News Card 4 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="glass-panel overflow-hidden rounded-xl h-[450px] flex flex-col transition-transform duration-500 group-hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An atmospheric indoor shot of the Liverpool FC trophy room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz7n10SNaftV2Hzf_42keWrl7_zaM1x_ebL6x5WlAmKegcKEblAjjvQyoYn-AQrdjLsq8E9q51i1gd63CcewyyKWklNXVD1o-qiSpENF4kH7BIu6gxH3B_7PGeAVeW_dPYUxIDo0IplWcojzphV_vqw3YH3gJX5b9nTswsXF-6lGU-IbNmhwHAkqAtEfS9iXT1m_jgxKChWQdx_PWMNaBX4ai_qsx8BEC4ceTwbmxTGuhofMB_8SV9jdrxC67JbNqLCQMInOPJrn6F"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-bold">TARIX</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<h3 class="font-headline-md text-headline-md line-clamp-2 text-on-surface">TARIXIY G'ALABALAR: 2005-YIL ISTANBUL MO'JIZASI</h3>
+<div class="flex justify-between items-center mt-4">
+<span class="text-xs text-on-surface-variant font-label-stats uppercase">2 KUN OLDIN</span>
+<span class="material-symbols-outlined text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community CTA Section -->
+<section class="py-section-gap relative">
+<div class="container mx-auto px-container-padding">
+<div class="glass-panel p-12 rounded-[2rem] relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+<div class="relative z-10 flex-1">
+<h2 class="font-headline-xl text-headline-xl mb-4 text-on-surface">BIZGA QO'SHILING</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        O'zbekistondagi Liverpool muxlislari bilan birga bo'ling. Eksklyuziv yangiliklar, uchrashuvlar va maxsus sovg'alar faqat bizning hamjamiyat a'zolari uchun.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary font-button-text text-button-text rounded-xl hover:scale-105 transition-transform shadow-lg shadow-primary/30">RO'YXATDAN O'TISH</button>
+<button class="px-8 py-4 border border-black/10 glass-panel hover:bg-black/5 transition-all font-button-text text-button-text rounded-xl text-on-surface">BATAFSIL MA'LUMOT</button>
+</div>
+</div>
+<div class="relative z-10 flex-1 grid grid-cols-2 gap-4">
+<div class="glass-panel p-6 rounded-xl text-center">
+<div class="text-primary font-headline-xl text-[40px] mb-2">10K+</div>
+<div class="text-xs font-label-stats uppercase tracking-widest text-on-surface-variant">A'ZOLAR</div>
+</div>
+<div class="glass-panel p-6 rounded-xl text-center">
+<div class="text-secondary font-headline-xl text-[40px] mb-2">50+</div>
+<div class="text-xs font-label-stats uppercase tracking-widest text-on-surface-variant">UCHRASHUVLAR</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding flex flex-col items-center gap-base bg-surface-container-low/80 backdrop-blur-lg border-t border-black/5">
+<div class="font-headline-md text-headline-md text-primary mb-4">LIVERPOOL UZ</div>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Magazin</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Bog'lanish</a>
+</div>
+<div class="flex gap-6 mb-12">
+<a class="w-10 h-10 glass-panel rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 glass-panel rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+</a>
+<a class="w-10 h-10 glass-panel rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+<p class="text-on-surface-variant/60 font-body-md text-body-md">
+        © 2024 LIVERPOOL UZ. Barcha huquqlar himoyalangan.
+    </p>
+</footer>
+<script>
+    function toggleTable(event) {
+        if (event) event.stopPropagation();
+        const matchCard = document.getElementById('matchCard');
+        const tableCard = document.getElementById('tableCard');
+        
+        if (matchCard.style.opacity === '0') {
+            matchCard.style.opacity = '1';
+            matchCard.style.pointerEvents = 'auto';
+            matchCard.style.transform = 'translateY(0)';
+            tableCard.style.opacity = '0';
+            tableCard.style.pointerEvents = 'none';
+            tableCard.style.transform = 'translateY(1rem)';
+        } else {
+            matchCard.style.opacity = '0';
+            matchCard.style.pointerEvents = 'none';
+            matchCard.style.transform = 'translateY(-1rem)';
+            tableCard.style.opacity = '1';
+            tableCard.style.pointerEvents = 'auto';
+            tableCard.style.transform = 'translateY(0)';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.classList.add('transition-all', 'duration-700', 'ease-out');
+        });
+    });
+</script>
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .animate-bounce-slow {
+        animation: bounce-slow 4s ease-in-out infinite;
+    }
+    #matchCard, #tableCard {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+</style>
+</body></html>

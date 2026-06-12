@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIVERPOOL UZ - O'yinlar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#464746",
+                        "on-secondary-fixed-variant": "#4d4800",
+                        "tertiary": "#60605f",
+                        "on-primary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#d4ca43",
+                        "on-tertiary-container": "#1b1c1b",
+                        "background": "#fdf8f8",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-container": "#410007",
+                        "outline": "#857372",
+                        "tertiary-container": "#e3e3e1",
+                        "secondary-fixed": "#f1e65d",
+                        "on-surface": "#201a1a",
+                        "on-secondary-fixed": "#1f1c00",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "primary": "#c0001f",
+                        "inverse-primary": "#ffb3b1",
+                        "outline-variant": "#d8c2c1",
+                        "inverse-on-surface": "#fbeeec",
+                        "on-surface-variant": "#534343",
+                        "on-background": "#201a1a",
+                        "surface-variant": "#f5dddb",
+                        "inverse-surface": "#362f2f",
+                        "surface-dim": "#e4d7d7",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#f0e1e0",
+                        "surface": "#fdf8f8",
+                        "tertiary-fixed": "#e3e2e0",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "surface-bright": "#fff8f7",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#211e00",
+                        "primary-container": "#ffdad8",
+                        "surface-container-highest": "#eadddc",
+                        "secondary": "#6a6100",
+                        "surface-tint": "#c0001f",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#f1e65d",
+                        "surface-container-low": "#faf1f0",
+                        "surface-container": "#f4e7e6",
+                        "on-primary-fixed": "#410007",
+                        "on-error-container": "#410002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "24px",
+                        "section-gap": "80px",
+                        "grid-gutter": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bebas Neue"],
+                        "headline-xl": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "label-stats": ["JetBrains Mono"],
+                        "display-lg": ["Bebas Neue"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Bebas Neue"],
+                        "button-text": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fdf8f8;
+            color: #201a1a;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .win-glow { border-color: rgba(34, 197, 94, 0.4); box-shadow: 0 0 20px rgba(34, 197, 94, 0.1); }
+        .loss-glow { border-color: rgba(192, 0, 31, 0.4); box-shadow: 0 0 20px rgba(192, 0, 31, 0.1); }
+        .draw-glow { border-color: rgba(75, 85, 99, 0.4); box-shadow: 0 0 20px rgba(75, 85, 99, 0.1); }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(192, 0, 31, 0.2), transparent);
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-white/70 backdrop-blur-md border-b border-black/5">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Magazin</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-xl font-button-text text-button-text hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">Kirish</button>
+</header>
+<main class="pt-32 pb-section-gap px-container-padding max-w-7xl mx-auto">
+<!-- Header Section -->
+<section class="mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h1 class="font-display-lg text-display-lg uppercase text-primary">O'yinlar Taqvimi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">Liverpool FCning joriy mavsumdagi barcha o'yinlari, natijalari va kutilayotgan uchrashuvlari.</p>
+</div>
+<div class="flex gap-4">
+<button class="glass-panel px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black/5 transition-all font-button-text text-button-text group">
+<span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">calendar_month</span>
+                Taqvim
+            </button>
+<div class="glass-panel p-1 rounded-xl flex bg-surface-container-low">
+<button class="px-6 py-2 rounded-lg bg-primary text-white shadow-md font-button-text text-button-text transition-all" id="toggle-past">O'tganlar</button>
+<button class="px-6 py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-button-text text-button-text transition-all" id="toggle-upcoming">Kelgusi</button>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="relative timeline-line space-y-16">
+<!-- PAST MATCHES GROUP -->
+<div class="space-y-12">
+<div class="flex justify-center">
+<span class="glass-panel px-8 py-2 rounded-full font-headline-md text-headline-md text-secondary border-secondary/20 bg-white/90">FEVRAL 2024</span>
+</div>
+<!-- Match Card 1: Win -->
+<div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+<div class="flex flex-col items-center md:items-end text-center md:text-right">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">17 FEV, 17:30</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">LIVERPOOL</h3>
+</div>
+<div class="z-10">
+<div class="glass-panel win-glow w-48 py-6 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group hover:scale-105 transition-transform bg-white/90">
+<div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="font-display-lg text-[42px] leading-none mb-1 flex gap-4 items-center text-on-surface">
+<span>4</span>
+<span class="text-primary text-2xl font-label-stats">:</span>
+<span>1</span>
+</div>
+<span class="font-label-stats text-[12px] bg-green-100 text-green-700 px-3 py-1 rounded-full border border-green-200">G'ALABA</span>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">PREMIER LEAGUE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">BRENTFORD</h3>
+</div>
+</div>
+<!-- Match Card 2: Draw -->
+<div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+<div class="flex flex-col items-center md:items-end text-center md:text-right order-1">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">10 FEV, 20:00</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">LIVERPOOL</h3>
+</div>
+<div class="z-10 order-2">
+<div class="glass-panel draw-glow w-48 py-6 rounded-2xl flex flex-col items-center justify-center relative group bg-white/90">
+<div class="font-display-lg text-[42px] leading-none mb-1 flex gap-4 items-center text-on-surface">
+<span>1</span>
+<span class="text-primary text-2xl font-label-stats">:</span>
+<span>1</span>
+</div>
+<span class="font-label-stats text-[12px] bg-gray-100 text-gray-600 px-3 py-1 rounded-full border border-gray-200">DURANG</span>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left order-3">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">PREMIER LEAGUE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">BURNLEY</h3>
+</div>
+</div>
+<!-- Match Card 3: Loss -->
+<div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+<div class="flex flex-col items-center md:items-end text-center md:text-right">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">4 FEV, 21:30</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">ARSENAL</h3>
+</div>
+<div class="z-10">
+<div class="glass-panel loss-glow w-48 py-6 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group bg-white/90">
+<div class="font-display-lg text-[42px] leading-none mb-1 flex gap-4 items-center text-on-surface">
+<span>3</span>
+<span class="text-primary text-2xl font-label-stats">:</span>
+<span>1</span>
+</div>
+<span class="font-label-stats text-[12px] bg-red-50 text-red-700 px-3 py-1 rounded-full border border-red-100">MAG'LUBIYAT</span>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">PREMIER LEAGUE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">LIVERPOOL</h3>
+</div>
+</div>
+</div>
+<!-- UPCOMING MATCHES GROUP -->
+<div class="space-y-12 pt-16">
+<div class="flex justify-center">
+<span class="glass-panel px-8 py-2 rounded-full font-headline-md text-headline-md text-primary border-primary/20 bg-white/90">MART 2024</span>
+</div>
+<!-- Upcoming Card 1 -->
+<div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center md:items-end text-center md:text-right">
+<div class="font-label-stats text-label-stats text-secondary mb-2">2 MART, 20:00</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">NOTTM FOREST</h3>
+</div>
+<div class="z-10">
+<div class="glass-panel w-48 py-6 rounded-2xl flex flex-col items-center justify-center border-black/10 bg-white/90">
+<div class="font-display-lg text-[42px] leading-none mb-1 text-on-surface-variant">VS</div>
+<span class="font-label-stats text-[12px] text-primary tracking-widest uppercase">Kutilmoqda</span>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">PREMIER LEAGUE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">LIVERPOOL</h3>
+</div>
+</div>
+<!-- Upcoming Card 2: Big Match -->
+<div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+<div class="flex flex-col items-center md:items-end text-center md:text-right">
+<div class="font-label-stats text-label-stats text-secondary mb-2">10 MART, 20:45</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">LIVERPOOL</h3>
+</div>
+<div class="z-10">
+<div class="glass-panel w-48 py-8 rounded-2xl flex flex-col items-center justify-center border-primary/30 bg-primary/5 shadow-xl shadow-primary/5 relative group overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="font-display-lg text-[42px] leading-none mb-1 text-on-surface">VS</div>
+<span class="font-label-stats text-[12px] text-primary font-bold">TOP MATCH</span>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="font-label-stats text-label-stats text-on-surface-variant mb-2">PREMIER LEAGUE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">MANCHESTER CITY</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Briefing (Bento Style) -->
+<section class="mt-section-gap grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between bg-white/80">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">sports_score</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Mavsumiy Gollar</h4>
+</div>
+<div class="mt-8">
+<div class="text-[56px] font-display-lg text-on-surface leading-none">63</div>
+<p class="font-body-md text-on-surface-variant">Barcha musobaqalarda</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between border-secondary/20 bg-white/80">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">military_tech</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Ligadagi O'rni</h4>
+</div>
+<div class="mt-8">
+<div class="text-[56px] font-display-lg text-secondary leading-none">1-O'RIN</div>
+<p class="font-body-md text-on-surface-variant">English Premier League</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between bg-white/80">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">trending_up</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Formasi</h4>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="w-10 h-10 rounded-lg bg-green-100 text-green-700 flex items-center justify-center font-bold border border-green-200">G'</span>
+<span class="w-10 h-10 rounded-lg bg-green-100 text-green-700 flex items-center justify-center font-bold border border-green-200">G'</span>
+<span class="w-10 h-10 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center font-bold border border-gray-200">D</span>
+<span class="w-10 h-10 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-bold border border-red-100">M</span>
+<span class="w-10 h-10 rounded-lg bg-green-100 text-green-700 flex items-center justify-center font-bold border border-green-200">G'</span>
+</div>
+<p class="mt-4 font-body-md text-on-surface-variant">Oxirgi 5 o'yin natijasi</p>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-section-gap px-container-padding flex flex-col items-center gap-base bg-surface-container-low border-t border-black/5">
+<div class="font-headline-md text-headline-md text-primary">LIVERPOOL UZ</div>
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Magazin</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bog'lanish</a>
+</div>
+<p class="text-on-surface-variant/70 font-body-md text-body-md mt-8">© 2024 LIVERPOOL UZ. Barcha huquqlar himoyalangan.</p>
+</footer>
+<script>
+    // Simple Interaction for Toggles
+    const pastBtn = document.getElementById('toggle-past');
+    const upcomingBtn = document.getElementById('toggle-upcoming');
+
+    pastBtn.addEventListener('click', () => {
+        pastBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
+        pastBtn.classList.remove('text-on-surface-variant');
+        upcomingBtn.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        upcomingBtn.classList.add('text-on-surface-variant');
+    });
+
+    upcomingBtn.addEventListener('click', () => {
+        upcomingBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
+        upcomingBtn.classList.remove('text-on-surface-variant');
+        pastBtn.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        pastBtn.classList.add('text-on-surface-variant');
+    });
+
+    // Scroll micro-interactions
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('h-16', 'bg-white/95', 'shadow-sm');
+            header.classList.remove('h-20', 'bg-white/70');
+        } else {
+            header.classList.add('h-20', 'bg-white/70');
+            header.classList.remove('h-16', 'bg-white/95', 'shadow-sm');
+        }
+    });
+</script>
+</body></html>

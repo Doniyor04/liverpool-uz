@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIVERPOOL UZ | Magazin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#464746",
+                    "on-secondary-fixed-variant": "#4d4800",
+                    "tertiary": "#5d5e5d",
+                    "on-primary-fixed-variant": "#92001c",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#d4ca43",
+                    "on-tertiary-container": "#1b1c1b",
+                    "background": "#fdf8f8",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdad8",
+                    "on-primary-container": "#410007",
+                    "outline": "#857372",
+                    "tertiary-container": "#e3e3e1",
+                    "secondary-fixed": "#f1e65d",
+                    "on-surface": "#201a1a",
+                    "on-secondary-fixed": "#1f1c00",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "primary": "#c8102e",
+                    "inverse-primary": "#ffb3b1",
+                    "outline-variant": "#d8c2c1",
+                    "inverse-on-surface": "#fbeeec",
+                    "on-surface-variant": "#534343",
+                    "on-background": "#201a1a",
+                    "surface-variant": "#f5dddb",
+                    "inverse-surface": "#362f2e",
+                    "surface-dim": "#e4d7d6",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#f3e2e1",
+                    "surface": "#fdf8f8",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-tertiary-fixed": "#1b1c1b",
+                    "surface-bright": "#fff8f7",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#211b00",
+                    "primary-container": "#c8102e",
+                    "surface-container-highest": "#e5d1d0",
+                    "secondary": "#696000",
+                    "surface-tint": "#c8102e",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#f1e65d",
+                    "surface-container-low": "#f9eceb",
+                    "surface-container": "#f6e8e7",
+                    "on-primary-fixed": "#410007",
+                    "on-error-container": "#410002"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "section-gap": "80px",
+                    "grid-gutter": "16px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Bebas Neue"],
+                    "headline-xl": ["Bebas Neue"],
+                    "body-md": ["Inter"],
+                    "label-stats": ["JetBrains Mono"],
+                    "display-lg": ["Bebas Neue"],
+                    "body-lg": ["Inter"],
+                    "headline-xl-mobile": ["Bebas Neue"],
+                    "button-text": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf8f8;
+            color: #201a1a;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: #ffffff;
+            border: 1px solid rgba(200, 16, 46, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.3);
+            transform: translateY(-2px);
+        }
+        .neon-text-glow {
+            text-shadow: 0 0 1px rgba(200, 16, 46, 0.2);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background text-on-surface">
+<!-- Background Gradient instead of dark shader -->
+<div class="fixed inset-0 z-[-1] bg-[radial-gradient(circle_at_top_right,_#fff1f0,_transparent)]"></div>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-white/80 backdrop-blur-md border-b border-black/5">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Tarix</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-button-text text-button-text" href="#">Magazin</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">shopping_cart</button>
+<button class="bg-primary text-white px-6 py-2 rounded-xl font-button-text text-button-text hover:bg-primary-container transition-all glow-hover">Kirish</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap px-container-padding max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12 text-center">
+<h1 class="font-display-lg text-display-lg uppercase tracking-tighter mb-4 text-on-surface neon-text-glow">Rasmiy Magazin</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-body-lg text-body-lg">LFC O'zbekiston muxlislari uchun maxsus kolleksiya. Har bir mahsulot — klub ruhini aks ettiradi.</p>
+</header>
+<!-- Category Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-16">
+<button class="bg-primary text-white px-8 py-3 rounded-full font-button-text text-button-text shadow-md hover:shadow-lg transition-all">Barchasi</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-button-text text-button-text hover:border-primary hover:text-primary hover:bg-primary/5 transition-all">Liboslar</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-button-text text-button-text hover:border-primary hover:text-primary hover:bg-primary/5 transition-all">Aksessuarlar</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-button-text text-button-text hover:border-primary hover:text-primary hover:bg-primary/5 transition-all">Esdaliklar</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+<!-- Product Card 1 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional product shot of the Liverpool FC 2024 home kit displayed in a cinematic dark studio. The iconic red jersey glows under dramatic spot lighting, revealing intricate fabric patterns and the pristine club crest. The background is a deep, shadowy void with subtle red light leaks, emphasizing the prestigious and authoritative atmosphere of the legendary Anfield club. High contrast and razor-sharp details highlight every stitch of the premium athletic wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH_57Xxz2Fh9BBkL71ef6v0e3FRof3GjNV4zlHKyXU-otuGXuHsrTOak2-05blRAmnjpb6URVm8ni5V73dZfrtkwg_uUThho5R_Ke3GnViBcrmMANLNNcOHS3e3JRlba0F9NZpwwuwy6o-VxMmeXtAhm0lj1PwWRfN791cCsCuboxl_Kz8Y8ynblEBGdOdDj95DESVg6k1QfnE3YkCx43f87EUpJFqbUbtppDMl22Zx0MBGyZ0D7Ze9JVDn8hT1PfHrSe6LKWrlo_X"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-stats text-label-stats shadow-sm">YANGI</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Home Kit 2024/25</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">850,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Klubning yangi mavsum uchun asosiy libosi. Yuqori sifatli material va an'anaviy qizil rang.</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious close-up of a Liverpool FC supporter scarf laid across a dark, frosted glass surface. The deep red and white knit patterns are visible in crisp detail, featuring the Liver Bird emblem and the words You'll Never Walk Alone. The scene is lit with cinematic amber and red highlights, creating a warm, prestigious glow. The atmosphere is evocative of the passionate matchday energy at Anfield stadium during a night game." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT3PX09Wi5RTP0elGVSrSQt2za6tnK5ereN9Ot1lAfRJQVqZ_z9nl8jZfJwB9UhPGe7WZlD2_wOmA6S3rdFf5RMrDGquK5C5RpU-NxZ_O789Lp76bd1LB0CSNPY02UzQ2ni98ovDUckjs5NivS1M0WbX9sW9qDXRWDiHA8LOnI26AJ7Lj3-_4-Wxemb11BdhKIjTbUGTsPER4IxOlNZczJXvru2OrpoEW25e2qVdKUL_RqyudU1dgTOEYLRYMYB8w7HXwghQwTFkhB"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Classic Scarf</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">120,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">"You'll Never Walk Alone" yozuvi tushirilgan klassik qizil-oq sharf. Har bir muxlis uchun shart!</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stylish Liverpool FC branded travel mug and bottle set presented in a high-end, modern design environment. The matte black finish of the accessories contrasts beautifully with the metallic red accents and gold club crest. The lighting is low-key and dramatic, with sharp reflections on the sleek surfaces. The products are positioned on a reflective dark platform, suggesting a premium lifestyle aesthetic suitable for a modern football supporter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCChB9hlRxiJyLNMxOoq7PJwWpy0aSZnT9c-VQX1ry2QtI_yMVswirLOILZjA7rldAKt6xFFCUWQXFnuwmFVidqhUJxc5z-XoWxovoAbyWZdOcggYlvcIDn3S569EmQ24ocMyGBI7UZUkc4i01VUxfX1RxT5Kz8V16STWaFn2xyYyaKbzzo47wnYChTpnhu2hJKMNeb6zGJNJQQBQoyvPNgivDDRHnti-xhoe-nmww1achFVQqmzNh7QZmX74ZnmM8OC2b3lvrH1KPp"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-stats text-label-stats shadow-sm">HOT</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">LFC Travel Bottle</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">180,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Matviy qoplamali, issiq va sovuqni saqlovchi premium ichimlik idishi. Sayohatlar uchun qulay.</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-quality Liverpool FC football positioned at the center of a darkened stadium pitch at dusk. The vibrant red panels of the ball are detailed with gold emblems, catching the lingering stadium floodlights. The background is a cinematic blur of green turf and distant empty stands under a deep blue twilight sky. The overall mood is intense, legendary, and full of sporting drama, capturing the essence of elite football competition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvoCdt7GrysEv7x6L5PTDzoePgah2NGpwh46NCgOHhWjHy6NeZRTklWDGWfNSk4bJNS5HTfNBPq4IMwlopkGNc6y6v0Wd6TpvbjrQQp004JdycakvN2ZTx1Mw_suZjmEZifyMAS8Agy_q1XxordX8-B7cSRqsmxQ1NsQp57KeNn6FXD9_DaQq0EkGi5QDv9tySkooq8fvmUFHR1wb9kAfvYQOLmmfx-axqBp9s-tR6o-5IO7oxwFzglv17-xfuAdFqTfFjsBEun2aB"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Official Match Ball</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">450,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Rasmiy o'yin to'pi, yuqori chidamlilik va aerodinamik xususiyatlarga ega.</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A pair of sleek, red and white athletic sneakers with the Liverpool FC crest subtly integrated into the design. The shoes are shown in a mid-air dynamic pose against a dark, moody background with subtle lens flares and light leaks in deep crimson. The lighting emphasizes the streamlined curves and premium textures of the footwear. The aesthetic is modern, high-tech, and oriented towards the lifestyle of a stylish, active supporter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACjgL5_-olkiVUf_znO7QFUw0y6XGF2cSysOo-ElKbLo1EPZYCh86XKlidYAFMyvtLTsi9kcvdGM_NIXUO-3LE4VfxBZBQOXJIO-SOJNliWQeQkOPaXqL-441ws_VNyBMWE2zWxqQ91rY66-pNbDOTeRRrEGbrQku7dL3zEQO5lgO_GoowD9osjHq_BHA7E8Uo4psXZjXc0GcJG_z-YZpeB2q5T-ZdgrRKyrdGyy1cCKvLkgZpJbmGpnClbjmmpsCr6QhSOyRLiNMo"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">LFC Lifestyle Shoes</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">1,200,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Kundalik kiyish uchun qulay va zamonaviy krossovkalar. Klub ranglarida maxsus dizayn.</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist professional product photograph of a Liverpool FC cap in dark red with a gold embroidered Liver Bird. The cap is set against a dark charcoal background with a single soft light source creating elegant shadows. The focus is on the intricate golden embroidery and the high-quality fabric texture. The mood is sophisticated and understated, targeting the modern fan who appreciates premium, subtly branded merchandise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkk3rxcCtPmDaGysjnn0CsC4n2nIdZrkvOIcS7KbZfDbt_67Jp5cvd3QIuruTN8OOdh1ov__Mk-QR53vhxeGeRSCkjQbHepucHBKLd9g-EM33NeHuh-lx5YcuRH3U0JsLj0W_-ILeqFBYO3ACJCnhYkLQmLwZpTpPuvpKu8Vt00_HYIsB-QtHE_y2dNqbJEcKt8K3Ybjd4U1NqepCJaBZB9XOJWODsu3AQOD9uQaZ9zHOWNAloMuM5z5liFNQY-0yXw3AIqPPvhtBE"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Premium Cap</h3>
+<span class="font-label-stats text-label-stats text-primary text-xl">95,000 UZS</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">Zoloto naqshli premium sifatli kepka. Quyoshdan himoya va klubga bo'lgan sadoqat.</p>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-button-text text-button-text flex items-center justify-center gap-2 transition-all duration-300 glow-hover">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Sotib olish
+                    </button>
+</div>
+</div>
+</div>
+<!-- Special Banner -->
+<section class="mt-section-gap bg-primary text-white rounded-2xl p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1),transparent)] pointer-events-none"></div>
+<div class="flex-1 space-y-4 relative z-10">
+<h2 class="font-headline-xl text-headline-xl uppercase text-white drop-shadow-md">A'zo bo'ling va chegirma oling!</h2>
+<p class="text-white/90 font-body-lg text-body-lg">Liverpool UZ rasmiy a'zolari uchun barcha mahsulotlarga 15% chegirma amal qiladi. Hoziroq ro'yxatdan o'ting.</p>
+<div class="pt-4">
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-button-text text-button-text hover:bg-surface-variant transition-all glow-hover">A'zo Bo'lish</button>
+</div>
+</div>
+<div class="flex-1 relative z-10 flex justify-center">
+<div class="w-64 h-64 bg-white/20 rounded-full blur-[100px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+<img class="w-full max-w-sm rounded-xl relative z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl" data-alt="An artistic representation of a Liverpool FC membership card and club accessories glowing on a pedestal. The lighting is cinematic with deep reds and gold glints reflecting off sleek surfaces. A blurred background of an illuminated Anfield tunnel creates a sense of exclusivity and prestige. The visual style is modern, dark, and highly authoritative, inviting fans into an elite inner circle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7gDFO-DojuVLusFsx4PnNE3K_TfQt9ax2p4GkpKhVGAiq2ANTcdSagqvzS--4pcuOZY15AAvWla5sECzvCAcnESIdKEwRXK4QY0R4p6dKwh3N82ceEw9at5Mc1uhmbWXLyJl_FaczjWpMEfxavW_dGggvED6gs07egLcuzfzJQ1FWqZ2zobnvv60h05EwMpQAA78xAP3mCdFWCyDoh6Arbtyc6L2ZJQzWZKv1pwXT5twI6wJWa1-Fk9p1FaaPOQz0aEQBCe7z3FP"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding flex flex-col items-center gap-base bg-white border-t border-black/5">
+<div class="font-headline-md text-headline-md text-primary mb-4">LIVERPOOL UZ</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-primary transition-colors font-body-md text-body-md" href="#">Magazin</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bog'lanish</a>
+</div>
+<div class="flex gap-6 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+<p class="text-on-surface-variant/60 font-body-md text-body-md">© 2024 LIVERPOOL UZ. Barcha huquqlar himoyalangan.</p>
+</footer>
+<script>
+        // Simple cart counter mock
+        let cartCount = 0;
+        const cartBtn = document.querySelector('button.material-symbols-outlined');
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.innerText.includes('Sotib olish')) {
+                btn.addEventListener('click', (event) => {
+                    cartCount++;
+                    cartBtn.classList.add('text-primary', 'scale-125');
+                    setTimeout(() => cartBtn.classList.remove('scale-125'), 200);
+                    
+                    // Create floating particle effect
+                    const particle = document.createElement('div');
+                    particle.className = 'fixed pointer-events-none text-primary font-bold z-[100]';
+                    particle.innerText = '+1';
+                    particle.style.left = `${event.clientX}px`;
+                    particle.style.top = `${event.clientY}px`;
+                    document.body.appendChild(particle);
+                    
+                    particle.animate([
+                        { transform: 'translateY(0)', opacity: 1 },
+                        { transform: 'translateY(-50px)', opacity: 0 }
+                    ], { duration: 800, easing: 'ease-out' }).onfinish = () => particle.remove();
+                });
+            }
+        });
+    </script>
+</body></html>

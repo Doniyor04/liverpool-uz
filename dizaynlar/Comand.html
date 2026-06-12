@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jamoa | LIVERPOOL UZ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .player-card-hover:hover {
+            box-shadow: 0 10px 30px rgba(200, 16, 46, 0.15);
+            border-color: rgba(200, 16, 46, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(200, 16, 46, 0.1);
+        }
+        body {
+            background-color: #f8f8f8;
+            color: #1c1b1b;
+            overflow-x: hidden;
+        }
+        .active-filter {
+            background-color: #c8102e !important;
+            color: white !important;
+            border-color: #c8102e !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "secondary-fixed-dim": "#d4ca43",
+                "tertiary-fixed-dim": "#c7c6c4",
+                "surface-dim": "#e5e2e1",
+                "secondary": "#9c9301",
+                "surface-tint": "#c8102e",
+                "error": "#ba1a1a",
+                "inverse-surface": "#313030",
+                "outline": "#857372",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#534343",
+                "secondary-container": "#f1e65d",
+                "primary": "#c8102e",
+                "surface-variant": "#f5dedd",
+                "tertiary": "#5d5e5d",
+                "outline-variant": "#d8c2c1",
+                "on-primary-container": "#ffffff",
+                "primary-fixed": "#ffdad8",
+                "inverse-primary": "#ffb3b1",
+                "surface-bright": "#fcf8f8",
+                "on-secondary-fixed-variant": "#4d4800",
+                "secondary-fixed": "#f1e65d",
+                "tertiary-fixed": "#e3e2e0",
+                "background": "#f8f8f8",
+                "surface": "#fcf8f8",
+                "on-primary-fixed-variant": "#92001c",
+                "inverse-on-surface": "#f5f0ef",
+                "surface-container-highest": "#e5e2e1",
+                "primary-fixed-dim": "#ffb3b1",
+                "on-background": "#1c1b1b",
+                "on-secondary-fixed": "#1f1c00",
+                "tertiary-container": "#e3e3e1",
+                "error-container": "#ffdad6",
+                "on-surface": "#1c1b1b",
+                "primary-container": "#c8102e",
+                "on-primary-fixed": "#410007",
+                "surface-container": "#f0eded",
+                "on-error-container": "#410002",
+                "surface-container-low": "#f5f2f2",
+                "on-tertiary-fixed-variant": "#464746",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#1b1c1b",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#1b1c1b",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-container": "#1f1c00",
+                "surface-container-high": "#eae7e6",
+                "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "spacing": {
+                "container-padding": "24px",
+                "section-gap": "80px",
+                "grid-gutter": "16px",
+                "base": "8px"
+              },
+              "fontFamily": {
+                "headline-md": ["Bebas Neue"],
+                "headline-xl": ["Bebas Neue"],
+                "body-md": ["Inter"],
+                "label-stats": ["JetBrains Mono"],
+                "display-lg": ["Bebas Neue"],
+                "body-lg": ["Inter"],
+                "headline-xl-mobile": ["Bebas Neue"],
+                "button-text": ["Inter"]
+              },
+              "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-stats": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                "button-text": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding h-20 bg-surface/80 backdrop-blur-md border-b border-black/5">
+<div class="font-headline-md text-headline-md tracking-wider text-primary">LIVERPOOL UZ</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Bosh sahifa</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-button-text text-button-text" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-button-text text-button-text" href="#">Magazin</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-xl font-button-text text-button-text hover:bg-opacity-90 transition-all">Kirish</button>
+</header>
+<main class="pt-32 pb-section-gap px-container-padding max-w-7xl mx-auto">
+<!-- Header Section -->
+<section class="mb-16">
+<div class="bg-surface p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary uppercase tracking-tight">Bizning Jamoa</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Liverpool FC tarkibi va yulduzlari bilan tanishing.</p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap gap-3">
+<button class="active-filter px-6 py-2 rounded-full font-button-text text-button-text border border-black/10 transition-all">Barchasi</button>
+<button class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Darvozabonlar</button>
+<button class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Himoyachilar</button>
+<button class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Yarim himoyachilar</button>
+<button class="bg-white px-6 py-2 rounded-full font-button-text text-button-text text-on-surface-variant border border-black/10 hover:border-primary/50 hover:text-primary transition-all">Hujumchilar</button>
+</div>
+</div>
+</section>
+<!-- Players Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-grid-gutter">
+<!-- Player Card 1 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Mohamed Salah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8VDYOJmDPnZ_zcZLb-jnljL1xAEEtzanPknnSpGCK_PaYsYuYP-OwBp1hqIgtYCqCXXSFtavtNwGdpNf_26LEYUyVPY-nvTzUAz6zmTC9IiJNc-di7JgXhs4y6iOFQIpkZM0rLm_RJFGw4Ty9TGOnRNUUTqiG1ggLCISTGH-KJXzPQKS4moesfKqjN519uf_x1q2zfIXeuVeO8TyJnsPIj5z-gdsOwT1VXymHta7r2NhC5c189Od-0Bm1F2w3H47SWbYEuviDaHkr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">11</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Mohamed Salah</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Misr, 31 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">24</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+<p class="font-label-stats text-primary">18</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 2 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Virgil van Dijk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWraHF0O6jfUUSsBUYC3FsJWLuscZVZ2kHUb1nKTnadygjjldwXW1pDO74AVeQJcDY92X16UgFN6Q1-HWWnpN7XOsP-ydJXz2xmENI9RLq9Oe6dPk27K2XcDoD1TxJOkR_5OQVmd2TGdDzKR-rSJtZ6DSHQ5_tnYgenJONlv20Dwwwb7uGFV_KROH9p9zoTMy9wnqL66BpgRogwHJH0ypC9eDnLt9DkgMS18aKtkIioXRFwkMNoEdZOTNsXzRPLQTuTs12SaKHPQi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Himoyachi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">4</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Virgil van Dijk</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Niderlandiya, 32 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">22</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">To'siq</p>
+<p class="font-label-stats text-primary">45</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 3 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Alisson Becker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9qskqyd7jTCJ_N5fvOOhg8PKVENsugoft43yiVQXjIUDmGWpBAgOvJiKpsEcFGjctdoCNf_gTyJPot2AR4wJbOFlC36sMGCB2hFj0p-5PS-ZFaAfYBXHG8MhfKn9G5NmV0mR8YgtePabDZ3V3Wf0P_buozaLOeVQAJ8ebzFo7zwLtnglP8lvMQkIkhS5-PQzxXqU4eS1Na5Bk6SsthZwuasBvY8r1zv2Aq8s2zVkC8IsiyDjBou204vYNVDuB7KQGLbNRpWGSOrpP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Darvozabon</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">1</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Alisson Becker</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Braziliya, 31 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">21</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Quruq</p>
+<p class="font-label-stats text-primary">9</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 4 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="T. Alexander-Arnold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhuP8qfAHrvE-6fCQl3Zgz-H7N40dy4-yd9S7jWOSAHtC0plidjvypR9uBJQl-ZwVtVkveOplKpWVUpwZsF0q1Go2aPTvxN2G8H2Z7hskzSZ5rH6ZRno1qbizKyG-iVtu5eDc5-uAOekGwKcfBSaDJmTcPgKH8Jhj9bt40EwIjYE5MFPaUbumg9P3f1moYZeP7eU0wAq0aes7VJe5daHwA8JG02FyGEWxFMx_sgiffBazwQPUodxX35SvjjmpDdrdB5tdrhsoHEFR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Himoyachi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">66</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">T. Alexander-Arnold</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Angliya, 25 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">20</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Assist</p>
+<p class="font-label-stats text-primary">10</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 5 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Dominik Szoboszlai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZSi1l5LwYC-99AmDQ7RQKllG_0KMZa_jesR_6gbUcQ-8_Q91xEYJMehQwmAwwUgmmpuuGBWP5uu3W3wyZ_6jyt7ayK9fJZRX9ytc3W4LcREbh8flT96R1tiCWfKJBu-VClkZW9MCyFBT1oKNUQm6jwZ6FvJtnTXoqh3utshhnG1fLf1n30xsOF_NMNFKtDrZ07e6zTdUeViGhKAe5uArZ4WWRNt3cQs6XpAvfTXCUHr0UhYqpovu46kyQbLCkPucUA_yIN_nCA5Tz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Yarim himoyachi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">8</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Dominik Szoboszlai</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Vengriya, 23 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">23</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+<p class="font-label-stats text-primary">3</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 6 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Luis Díaz" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUl5fHKbHhf0H3RCUajpeB5HPgJ9M1lOukJKqOkKILC_n-klQqLwAkzhTvyEziU44oN796pIaAvEzGijml29Rus5pDvvVkTWG7Fkd0bDTzai95srMCELi0G6V-bvXyaOOwhtMHBcpvwpv1PzHCeZ9n7PdHe2V9SA60TDPwRrO1oOsXSG47pPWImHBoGQY4EGg65tdqyUjL_ce0nefRxVC3Z3SSx7F1-qVSjEUS5G9FJyO-jooyqnAd-7Rl027JlVCaW55ViqQvlTf2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">7</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Luis Díaz</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Kolumbiya, 27 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">21</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+<p class="font-label-stats text-primary">6</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 7 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Alexis Mac Allister" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSwg3A9pyWFvIlxZbX-I0ed9We9mStiEB9UWQ0RLAa1CGHSQzSp52So9YNrBiv51B2R9bjCvUA6_JnlqzL1l3aNe1Hgn5hk4fL8Y5uu3cmi1SApPuLKyyd6Tv0Ama8_2Eey8LArFWcYKDfnGqk-OG27AFiH5FlpsMsBAMOiKjxdzDQ0FuwMoBEiVdUAUd5c-JvfRR3Eq_4b-yI8DjOG-iEYnQuq96ExR6CntELZTj8eABUJlT1Jtz48uVPKXtwdAZ_oNuk2DAKey9c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Yarim himoyachi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">10</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Alexis Mac Allister</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Argentina, 25 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">18</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Uzatma</p>
+<p class="font-label-stats text-primary">92%</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Player Card 8 -->
+<div class="player-card-hover group bg-white rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-black/5 shadow-sm">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Darwin Núñez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUmo4E9MSKkvP6eI-ZoMxh7V0qP6wxfscYwOLKqQFJlLhI7Uhuh1nyac-umvJcs1_AEPif9N8O4x7cYB-YUHPqn9sbQWXr7kP6fbtX9_l2mUF78W8FcGi2o6NiVsDBncvT4zQEourQi80EpYD2pXrJhw-Hcbk3kgv9e9wmHAImtjC2MngEhAJmdl-7u95BG1x8Q2mH-mrwxCr0sL5BK2mmQYukh46rSRVikd0BLp6tbfRhdwTzrwCwanSQCFvwyqmEdoCodzNtegM9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full font-label-stats text-label-stats">Hujumchi</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-4xl text-primary/30">9</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Darwin Núñez</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body-md">Urugvay, 24 yosh</p>
+</div>
+<div class="mt-4 pt-4 border-t border-black/5 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">O'yin</p>
+<p class="font-label-stats text-primary">23</p>
+</div>
+<div class="text-center">
+<p class="font-label-stats text-xs text-on-surface-variant">Gol</p>
+<p class="font-label-stats text-primary">10</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Staff Section -->
+<section class="mt-24">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-8 border-l-4 border-primary pl-4">Texnik shtab</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+<div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+<div class="w-20 h-20 rounded-full border-2 border-primary overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Arne Slot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq_I-zPuwaRYOk5Z31pNHaNPuCfSWR9VdQ3kY_Y8V5DQ1JrZw8SyJhDfV7JtHIIx7xqKfJPDoj6UQGDSwXTFjYfSIcJ98TpNIv4McM37sTe65V5FNF5UsfruhS5Jq7G0Z57xiG3HRTWCgB7z5p6_UtwjcHcfZZIzK2pyHjwPQVVRsFXnhMTeJSvDDX2B1o3nGAqm-mKq5O7Qea3Wh8Eu3G7TKZmwt18L6TkZee1tg__99L1lrJGuo4SLJRrkQII9QVLOp5DAeXfAo"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Arne Slot</h4>
+<p class="text-on-surface-variant font-body-md">Bosh murabbiy</p>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+<div class="w-20 h-20 rounded-full border-2 border-black/10 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="John Heitinga" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMR2z-9qPpXegAEGyJLiGFl0kIAF6YPvolXxqnvYYpPIFUZsrM6vetP7p3vi6Y3g0fOgzkjAVSOQW1N6Jq303dgeaPltucfW8HKvz9y2sKiLqS8EyAnR5JrH0liWsS_8nn4SY5EcU6IpkDNpit7yk7lgW13sju8ouGNxYP-iyCuoi_gcCgcq-jY1Qm-txYDbHer9MUxG84ryvSMWXFL8fbTry_CQEBiBlvaQiCzqmp6TQsjubmVfHMtSTaK_SKk_8_YSKxDNZ-gREd"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">John Heitinga</h4>
+<p class="text-on-surface-variant font-body-md">Murabbiy yordamchisi</p>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center gap-6 border border-black/5 shadow-sm">
+<div class="w-20 h-20 rounded-full border-2 border-black/10 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Richard Hughes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlOlOskUeKdyHs-SXRX2GzJUqosLZHeNqQwXo1upOlE5htIymkWNIVgMSwz-VcxuX7SzcXjtmDXOkvq_4iFxOBl-uUHZTJPXUFUJKJMuBkWPVmhTrGG_3I6KINsSDHeqX0GBmH4SWS5ePwEpg622xPC3qvrOri6u_60h8B27vYPDRWUs2k-vLRnH8oCzUGn4lKANX9xv67T7_9bLIfElQTQj_lL794cJnfqDLnO69YXnPabrqzzIdbCAojBqcVXs9PEXO5rUbv9r4"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Richard Hughes</h4>
+<p class="text-on-surface-variant font-body-md">Sport direktori</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding flex flex-col items-center gap-base bg-surface border-t border-black/5">
+<div class="font-headline-md text-headline-md text-primary mb-4">LIVERPOOL UZ</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bosh sahifa</a>
+<a class="text-primary font-body-md text-body-md" href="#">Jamoa</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">O'yinlar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Stadion</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Tarix</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Magazin</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Bog'lanish</a>
+</div>
+<div class="flex gap-6 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-all scale-100 hover:scale-110" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all scale-100 hover:scale-110" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all scale-100 hover:scale-110" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+</div>
+<p class="opacity-80 font-body-md text-body-md text-on-surface-variant">© 2024 LIVERPOOL UZ. Barcha huquqlar himoyalangan.</p>
+</footer>
+<script>
+    // Simple filter logic for demonstration
+    const filterButtons = document.querySelectorAll('button.rounded-full');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+                b.classList.remove('active-filter');
+                b.classList.add('bg-white', 'text-on-surface-variant');
+            });
+            btn.classList.add('active-filter');
+            btn.classList.remove('bg-white', 'text-on-surface-variant');
+        });
+    });
+</script>
+</body></html>
