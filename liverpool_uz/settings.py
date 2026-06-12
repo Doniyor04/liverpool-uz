@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Local apps
     'core',
     'pages',
+	'team',
 ]
 
 MIDDLEWARE = [

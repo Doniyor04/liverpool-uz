@@ -33,13 +33,22 @@ class ClubAchievement(models.Model):
     title = models.CharField(max_length=200, verbose_name="Yutuq nomi")
     numb_achievement = models.PositiveIntegerField(verbose_name="Yutuqlar soni")
 
+    def __str__(self):
+        return self.title
+
 class ImportantDate(models.Model):
     title = models.CharField(max_length=200, verbose_name="Date title")
     content = models.TextField(verbose_name="Date content")
     year = models.PositiveIntegerField(verbose_name="Sanasi")
     image = models.ImageField(upload_to='media/', null=True, blank=True, verbose_name="Image")
 
+    def __str__(self):
+        return self.title
+
 class Legend(models.Model):
     name = models.CharField(max_length=100, verbose_name="Legend name")
     about = models.TextField(verbose_name="About of legend")
     image = models.ImageField(upload_to='media/', null=True, blank=True, verbose_name="Legend image")
+
+    def __str__(self):
+        return self.name
